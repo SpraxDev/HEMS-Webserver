@@ -21,7 +21,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
-import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -230,7 +229,7 @@ public class HttpServer implements Closeable {
         writeLineCRLF(out, "HTTP/1.1 " + statusCode + " " + statusMsg);
 
         if (body != null && body.length > 0 && !headers.containsKey("content-length")) {
-            headers = new TreeMap<>(headers);
+            headers = new LinkedHashMap<>(headers);
             headers.put("content-length", String.valueOf(body.length));
         }
 
