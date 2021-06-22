@@ -24,13 +24,6 @@
     <build>
         <finalName>HEMS-Webserver</finalName>
 
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -83,18 +76,6 @@
                             </excludes>
                         </filter>
                     </filters>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.2.0</version>
-
-                <configuration>
-                    <nonFilteredFileExtensions>
-                        <nonFilteredFileExtension>ico</nonFilteredFileExtension>
-                    </nonFilteredFileExtensions>
                 </configuration>
             </plugin>
         </plugins>

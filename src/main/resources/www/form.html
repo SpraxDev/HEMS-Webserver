@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <meta name="author" content="Sprax (Christian Koop)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_EN">
+
+    <title>Form | HEMS-Webserver (implemented by SpraxDev)</title>
+</head>
+
+<body>
+<header>
+    <h1>Test-Form</h1>
+</header>
+
+<main>
+    <div>
+        <h2>GET-Form</h2>
+
+        <form method="GET">
+            <label for="gName">Enter your name</label>
+            <input id="gName" name="name" type="text" placeholder="Username">
+
+            <br><br>
+
+            <label for="gToS">I confirm that by submitting this form,
+                I transfer all my human rights to the server operator.</label>
+            <input id="gToS" name="ToS" type="checkbox" required>
+
+            <br><br>
+
+            <input name="666" type="text" value="666" hidden readonly required>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>POST-Form</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            <label for="pName">Enter your name</label>
+            <input id="pName" name="name" type="text" placeholder="Username">
+
+            <br><br>
+
+            <label for="pToS">I confirm that by submitting this form,
+                I transfer all my human rights to the server operator.</label>
+            <input id="pToS" name="ToS" type="checkbox" required>
+
+            <br><br>
+
+            <input name="666" type="text" value="666" hidden readonly required>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>
